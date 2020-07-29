@@ -360,5 +360,5 @@ class data(var Si: String?, var Dong: String?) : Parcelable{
 
 }
 
-//뀨잉123
+//뀨잉123123123
 
