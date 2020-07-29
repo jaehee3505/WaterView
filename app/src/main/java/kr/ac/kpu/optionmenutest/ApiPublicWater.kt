@@ -1,12 +1,16 @@
 package kr.ac.kpu.optionmenutest
 import org.json.JSONException
 import org.json.JSONObject
+import org.w3c.dom.Document
 import java.io.*
 import java.lang.RuntimeException
 import java.net.MalformedURLException
 import java.net.URL
 import java.net.URLEncoder
+import java.util.logging.XMLFormatter
+import javax.xml.parsers.DocumentBuilderFactory
 
+//=============================================보류=============================================
 
 
 class ApiPublicWater(sgcnm:String) {
@@ -19,19 +23,22 @@ class ApiPublicWater(sgcnm:String) {
     var adapter : ListViewAdapter = ListViewAdapter()
 
     val key: String = "jrHefDB3zZXYxtdOH3FxxoKg4R3c2YNutlOinWRD4IGsXZJcuFPRE40oRkeT4%2FpHYAfWlTg7pSdB3N%2FTg3s8pg%3D%3D"
-    var waterURL: String = "http://opendata.kwater.or.kr/openapi-data/service/pubd/waterinfos/waterquality/daywater/list?serviceKey=" + key + "&sgccd<=99999&sitecd<=21002&stdt=2020-07-27&eddt=2020-07-28&numOfRows=9999&pageNo=1&json"
+    val waterURL: String = "http://opendata.kwater.or.kr/openapi-data/service/pubd/waterinfos/waterquality/daywater/list?serviceKey=" + key + "&sgccd<=99999&sitecd<=21002&stdt=2020-07-27&eddt=2020-07-28&numOfRows=9999&pageNo=1&"
 
-    fun main(): ListViewAdapter{
+
+    fun main(args: Array<String>): ListViewAdapter{
         var text: String? = null
+
         try{
             text = URLEncoder.encode(sgcnm,"UTF-8")
         }catch(e:UnsupportedEncodingException){
             throw RuntimeException("검색어 인코딩 실패")
         }
 
+        //수정
         val url = "$waterURL?address=$text"
         val responseBody = get(url)
-        parseData(responseBody)
+        parseData(responseBody) //error
 
         return adapter
     }
@@ -74,7 +81,7 @@ class ApiPublicWater(sgcnm:String) {
         var Sgcnm: String
         var Sitenm: String
         var ph: Double
-        var jsonObject = JSONObject(responseBody)
+        var jsonObject = JSONObject(responseBody) //error
         try {
             val jsonArray = jsonObject.getJSONArray("waterURL")
 

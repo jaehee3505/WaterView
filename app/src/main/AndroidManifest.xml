@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/mainwater"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ApiTestField"></activity>
+        <activity android:name=".optionTest"></activity>
+        <activity android:name=".ApiTestField" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".OptionMenu" />
         <activity android:name=".MainActivity">

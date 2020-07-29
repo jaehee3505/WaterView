@@ -14,10 +14,11 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second2)
 
-        val si_items = resources.getStringArray(R.array.cities) //서울 ~ 제주
+        val si_items = resources.getStringArray(R.array.Apitest) //서울 ~ 제주
         val myAdapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_dropdown_item, si_items)
                                     //     컨택스트                 만들어질 Layout Resource              리스트
         val intent = Intent(this, OptionMenu::class.java)
+        val intentTest = Intent(this,optionTest::class.java) //test
 
 
         var si:String = "why" //시
@@ -29,12 +30,18 @@ class SecondActivity : AppCompatActivity() {
         waterbundle.putSerializable("Si", si)
         waterbundle.putSerializable("Dong", dong)
          */
-
+        var waterData:data? = null
         choose.setOnClickListener(){//버튼
             //여기에 이제 스피너 조건 넣어서 만족하는 조건을 다음 3번째 엑티비티에 인텐트 넘겨주면 됨
-            var waterData = data(si,dong)
+            waterData = data(si,dong)
             intent.putExtra("WaterData",waterData)
             startActivity(intent)
+        }
+
+        testOptBtn.setOnClickListener(){
+            waterData = data(si,dong)
+            intentTest.putExtra("WaterData",waterData)
+            startActivity(intentTest)
         }
 
         spinner.adapter = myAdapter

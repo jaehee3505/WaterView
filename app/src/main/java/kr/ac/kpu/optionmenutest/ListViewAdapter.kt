@@ -8,6 +8,9 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import java.lang.reflect.Array
 
+//=============================================보류=============================================
+
+
 class ListViewAdapter : BaseAdapter() { //BaseAdapter() 상속
     var list = ArrayList<ListViewItem>() //<클래스>
 

@@ -2,6 +2,8 @@ package kr.ac.kpu.optionmenutest
 
 import java.time.LocalDate
 
+//=============================================보류=============================================
+
 class ListViewItem {
     private var Sgcnm: String? = null //sgcnm
     private var Sitenm: String? = null //sitenm
