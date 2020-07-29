@@ -1,5 +1,7 @@
 package kr.ac.kpu.optionmenutest
 
+//firebase 추가버전 -snowflo-
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
