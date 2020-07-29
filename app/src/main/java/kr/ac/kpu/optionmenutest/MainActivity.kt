@@ -16,5 +16,10 @@ class MainActivity : AppCompatActivity() {
         cityButton.setOnClickListener(){
             startActivity(intent)
         }
+
+        val ApiIntent = Intent(this,ApiTestField::class.java)
+        ApiTestButton.setOnClickListener(){
+            startActivity(ApiIntent)
+        }
     }
 }

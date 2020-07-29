@@ -6,6 +6,28 @@
     <string name="backHome">홈으로</string>
     <string name="moreInfo">세부정보</string>
 
+    <string-array name="Apitest">
+        <item>거제시</item>
+        <item>고령군</item>
+        <item>광주시</item>
+        <item>금산군</item>
+        <item>나주시</item>
+        <item>단양군</item>
+        <item>동두천시</item>
+        <item>봉화군</item>
+        <item>사천시</item>
+        <item>양주시</item>
+        <item>예천군</item>
+        <item>완도군</item>
+        <item>장흥군</item>
+        <item>정읍시</item>
+        <item>진도군</item>
+        <item>청송군</item>
+        <item>통영시</item>
+        <item>파주시</item>
+        <item>함평군</item>
+    </string-array>
+
     <string-array name="cities">
         <item>서울특별시</item>
         <item>부산광역시</item>
